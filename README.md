@@ -1,4 +1,4 @@
-# Web monitoring custom log shipping
+# Client custom log shipping
 
 ## Panduan Pemasangan
 
