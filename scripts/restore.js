@@ -163,7 +163,7 @@ const main = async () => {
   try {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
-    dotenv.config({path: __dirname+'/.env'});
+    dotenv.config({path: join(__dirname, '..', '.env')});
     const logs = await getLogs();
     const config = {
       username: process.env.MSSQL_USERNAME,
