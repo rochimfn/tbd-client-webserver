@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "migrate": "knex migrate:rollback --all && knex migrate:latest",
-    "setup": "knex seed:run",
+    "setup": "knex migrate:rollback --all && knex migrate:latest && knex seed:run",
     "start": "node src/index.js"
   },
   "dependencies": {
