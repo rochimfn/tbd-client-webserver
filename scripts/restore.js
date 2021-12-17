@@ -161,7 +161,9 @@ const moveLogs = async (logs) => {
 
 const main = async () => {
   try {
-    dotenv.config();
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = dirname(__filename);
+    dotenv.config({path: __dirname+'/.env'});
     const logs = await getLogs();
     const config = {
       username: process.env.MSSQL_USERNAME,
